@@ -2,23 +2,22 @@ package fr.iut.editeur.commande;
 
 import fr.iut.editeur.document.Document;
 
-public class CommandeRemplacer extends CommandeDocument {
+public class CommandeMajuscule extends CommandeDocument {
 
 
-    public CommandeRemplacer(Document document, String[] parameters) {
+    public CommandeMajuscule(Document document, String[] parameters) {
         super(document, parameters);
     }
 
     @Override
     public void executer() {
-        if(parameters.length < 4) {
-            System.err.println("Format attendu : remplacer;depart;fin;texte");
+        if(parameters.length < 3) {
+            System.err.println("Format attendu : majuscules;depart;fin");
             return;
         }
         int start = Integer.parseInt(parameters[1]);
         int end = Integer.parseInt(parameters[2]);
-        String texte = parameters[3];
-        this.document.remplacer(start, end, texte);
+        this.document.majuscules(start, end);
         super.executer();
     }
 
