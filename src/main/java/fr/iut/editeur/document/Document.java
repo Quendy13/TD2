@@ -37,6 +37,10 @@ public class Document {
         texte = leftPart + rightPart;
     }
 
+    public void clear() {
+        texte = "";
+    }
+
     @Override
     public String toString() {
         return this.texte;
