@@ -31,6 +31,12 @@ public class Document {
         texte = leftPart + remplacement + rightPart;
     }
 
+    public void effacer(int start, int end) {
+        String leftPart = texte.substring(0, start-1);
+        String rightPart = texte.substring(end);
+        texte = leftPart + rightPart;
+    }
+
     @Override
     public String toString() {
         return this.texte;
