@@ -38,7 +38,7 @@ public class Document {
     }
 
     public void clear() {
-        texte = "";
+        texte = "LES ZIZIS";
     }
 
     @Override
